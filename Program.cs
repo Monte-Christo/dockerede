@@ -16,10 +16,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.MapGet("/hello", Hi).WithName(nameof(Hi));
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+await app.RunAsync();
+
+static string Hi() => "Welcome to my Minimal API implementation!";
