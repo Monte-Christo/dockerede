@@ -1,6 +1,6 @@
 services:
   app:
-    image: edgarknapp/dockerde:latest
+    image: edgarknapp/dockerede:latest
     entrypoint:
     - sleep
     - infinity
